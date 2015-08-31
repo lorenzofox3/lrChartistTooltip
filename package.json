@@ -1,0 +1,21 @@
+{
+  "name": "lr-chartist-tooltip-plugin",
+  "version": "1.0.0",
+  "description": "tooltip plugin for chartist.js",
+  "main": "lrChartistTooltip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chartist",
+    "tooltip",
+    "plugin"
+  ],
+  "author": "Laurent Rendard",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.12.0"
+  }
+}

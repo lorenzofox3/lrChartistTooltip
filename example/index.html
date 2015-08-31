@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="./lib/chartist.js"></script>
+  <script src="../lrChartistTooltip.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/chartist.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.css">
+</head>
+<style>
+
+  section{
+    margin: 0 20px;
+  }
+
+  .ct-bar:hover, .ct-point:hover {
+    cursor: pointer;
+  }
+
+  .ct-tooltip-a, .ct-tooltip-b {
+    z-index: 999;
+    opacity: 0.8;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px #2f2f2f;
+  }
+
+  .ct-tooltip-a {
+    background: #d70206;
+  }
+
+  .ct-tooltip-b {
+    background: #f05b4f;
+  }
+
+  .ct-tooltip-b h3, .ct-tooltip-a h3 {
+    padding: 2px;
+    margin: 0;
+  }
+
+  .ct-tooltip-b p, .ct-tooltip-a p {
+    margin: 0;
+    padding: 3px;
+  }
+</style>
+<body>
+<section class="container">
+  <div class="row">
+    <h1><i class="glyphicon glyphicon-list"></i> Code sample</h1>
+    <pre><code>let labels = [1,2,3];
+let series = [
+  [
+    {meta: 'description', value: 1 },
+    {meta: 'description', value: 5},
+    {meta: 'description', value: 3}
+  ],
+  [
+    {meta: 'other description', value: 2},
+    {meta: 'other description', value: 4},
+    {meta: 'other description', value: 2}
+  ]
+];
+let plugins = [
+  Chartist.plugins.lrTooltip({
+    template:'&lt;h3 class="small">{{meta}}&lt;/h3>&lt;p class="small">&lt;i class="glyphicon glyphicon-tag">&lt;/i> $ {{y}}&lt;/p>',
+    labelOffset:{
+      x : 15
+    }
+  })
+];
+
+var chart = new Chartist.Bar('#myChart', {labels, series}, {plugins, stackBars:true});
+var chartLine = new Chartist.Line('#myChartLine', {labels, series}, {plugins});</code></pre>
+  </div>
+</section>
+<section class="container">
+  <div class="row">
+    <h1><i class="glyphicon glyphicon-signal"></i> Bar (stacked)</h1>
+    <div id="myChart" class="ct-chart"></div>
+  </div>
+</section>
+<section class="container">
+  <div class="row">
+    <h1><i class="glyphicon glyphicon-equalizer "></i> Line</h1>
+    <div id="myChartLine" class="ct-chart"></div>
+  </div>
+</section>
+<script src="./bundle.js"></script>
+</body>
+</html>
