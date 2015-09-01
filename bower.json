@@ -1,0 +1,23 @@
+{
+  "name": "lr-chartist-tooltip-plugin",
+  "main": "lrChartistTooltip.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lorenzofox3/lrChartistTooltip",
+  "authors": [
+    "lorenzofox3 <laurent34azerty@gmail.com>"
+  ],
+  "description": "tooltip plugin for chartist chart library",
+  "keywords": [
+    "chartist",
+    "plugin",
+    "tooltip"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

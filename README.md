@@ -7,8 +7,8 @@ tooltip plugin for [chartist](http://gionkunz.github.io/chartist-js/) chart libr
 
 ## install 
 
-``npm install lr-chartist-tooltip``
-``bower install lr-chartist-tooltip``
+``npm install lr-chartist-tooltip-plugin``
+``bower install lr-chartist-tooltip-plugin``
 
 ## usage
 
