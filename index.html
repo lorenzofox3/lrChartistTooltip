@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Lrchartisttooltip by lorenzofox3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lrchartisttooltip</h1>
+      <h2 class="project-tagline">a tooltip plugin for chartist</h2>
+      <a href="https://github.com/lorenzofox3/lrChartistTooltip" class="btn">View on GitHub</a>
+      <a href="https://github.com/lorenzofox3/lrChartistTooltip/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/lorenzofox3/lrChartistTooltip/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="lr-chartist-tooltip" class="anchor" href="#lr-chartist-tooltip" aria-hidden="true"><span class="octicon octicon-link"></span></a>lr-chartist-tooltip</h1>
+
+<p>tooltip plugin for <a href="http://gionkunz.github.io/chartist-js/">chartist</a> chart library</p>
+
+<ul>
+<li>support templates</li>
+<li>no dependency (other than Chartist itself)</li>
+<li>70 lines of code</li>
+</ul>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>install</h2>
+
+<p><code>npm install lr-chartist-tooltip</code>
+<code>bower install lr-chartist-tooltip</code></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h2>
+
+<div class="highlight highlight-Javascript"><pre><span class="pl-k">var</span> chart <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Chartist.Line</span>(<span class="pl-s"><span class="pl-pds">'</span>.ct-chart<span class="pl-pds">'</span></span>, {
+  labels<span class="pl-k">:</span> [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>],
+  series<span class="pl-k">:</span> [
+    [
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">1</span> },
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">5</span>},
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">3</span>}
+    ],
+    [
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>other description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">2</span>},
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>other description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">4</span>},
+      {meta<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>other description<span class="pl-pds">'</span></span>, value<span class="pl-k">:</span> <span class="pl-c1">2</span>}
+    ]
+  ]
+}, {
+  plugins<span class="pl-k">:</span> [
+    Chartist.<span class="pl-c1">plugins</span>.<span class="pl-c1">lrTooltip</span>({template<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>&lt;p&gt;{{meta}}:{{y}}&lt;/p&gt;<span class="pl-pds">'</span></span>})
+  ]
+});</pre></div>
+
+<h3>
+<a id="template-variables-to-put-between---" class="anchor" href="#template-variables-to-put-between---" aria-hidden="true"><span class="octicon octicon-link"></span></a>template variables (to put between {{ }} )</h3>
+
+<ol>
+<li>
+<strong>y</strong> the y value</li>
+<li>
+<strong>x</strong> the x value</li>
+<li>
+<strong>meta</strong> some meta data string</li>
+</ol>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>options</h3>
+
+<ol>
+<li>
+<strong>tooltipClass</strong> : the class name added to the tooltip element (default ct-tooltip)</li>
+<li>
+<strong>template</strong> : the template string to be interpolated (default {{y}})</li>
+<li>
+<strong>labelOffset</strong>: x and y value to position the tooltip<br>
+</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/lorenzofox3/lrChartistTooltip">Lrchartisttooltip</a> is maintained by <a href="https://github.com/lorenzofox3">lorenzofox3</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
